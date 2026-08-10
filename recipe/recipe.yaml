@@ -1,8 +1,8 @@
 schema_version: 1
 
 context:
-  version: 9.0.1
-  build: 3
+  version: "9.0.2"
+  build: 0
   mpi_prefix: ${{ 'mpi_' + mpi if mpi != 'nompi' else 'nompi_' }}
 
 package:
@@ -11,7 +11,7 @@ package:
 
 source:
   url: https://github.com/neuronsimulator/nrn/releases/download/${{ version }}/nrn-full-src-package-${{ version }}.tar.gz
-  sha256: 4bc548655c63c39913ccdc9ff5bdbcdeb040ceb147a5941ae259f42ff06df1b8
+  sha256: 8a77890ae32dba2a8e6cf4fa42a27054c5fa319d16e3a99dd8a26a3529090ef6
   patches:
     # patch cython compiler error
     - d0d1.patch
